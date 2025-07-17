@@ -1,7 +1,3 @@
-# Music Sync App
-
-A real-time music synchronization app built with React Native, Expo, and Firebase. Users can sync music playback between two users in real-time, with features like playlists, queue management, and synchronized controls.
-
 ## Features
 
 - **Real-time Music Sync**: Synchronize music playback between two users
