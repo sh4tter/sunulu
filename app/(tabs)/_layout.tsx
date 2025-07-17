@@ -18,26 +18,44 @@ export default function TabLayout() {
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
+        tabBarLabelStyle: {
+          fontSize: 16,
+          fontWeight: '600',
+          marginTop: -4,
+          marginBottom: 12,
+        },
+        tabBarIconStyle: {
+          marginTop: 12,
+          marginBottom: -4,
+        },
         tabBarStyle: Platform.select({
           ios: {
             // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
+            paddingBottom: 10,
+            height: 80,
+            backgroundColor: '#000000',
           },
-          default: {},
+          default: {
+            paddingBottom: 10,
+            marginBottom: 10,
+            height: 80,
+            backgroundColor: '#000000',
+          },
         }),
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Songs',
+          tabBarIcon: ({ color }) => <IconSymbol size={32} name="music.note" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="playlists"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Playlists',
+          tabBarIcon: ({ color }) => <IconSymbol size={32} name="music.note.list" color={color} />,
         }}
       />
     </Tabs>
