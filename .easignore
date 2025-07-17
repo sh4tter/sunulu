@@ -131,6 +131,8 @@ firebase-debug.*.log
 # Local development files
 local/
 dev/
+/android
+/ios
 
 # Backup files
 *.bak
